@@ -1,0 +1,68 @@
+✅ Key Topics & Concepts Learned
+🔹 OpenCV Basics & Video Capture
+How to initialize a camera using cv2.VideoCapture(0) and external cam with cv2.VideoCapture(1)
+
+Real-time video frame processing with cv2.read() and cv2.flip()
+
+🔹 Region of Interest (ROI)
+Defining ROI using pixel slicing:
+roi = frame[roi_top:roi_bottom, roi_right:roi_left]
+
+Importance of focusing only on ROI to reduce processing time and improve speed
+
+🔹 Background Averaging
+Implemented cv2.accumulateWeighted() for background subtraction
+
+Built a running average model to isolate the hand from the background
+
+🔹 Image Preprocessing
+Converted frame to grayscale with cv2.cvtColor
+
+Applied Gaussian blur to reduce noise before segmentation
+
+🔹 Hand Segmentation
+Used cv2.absdiff() and cv2.threshold() to segment hand
+
+Extracted contours using cv2.findContours()
+
+🔹 Convex Hull & Finger Counting
+Found hand convex hull using cv2.convexHull()
+
+Calculated center of palm
+
+Counted fingers using filtered circular ROI and heuristics (contour size, wrist exclusion)
+
+🔹 Slide Control with PyAutoGUI
+Used pyautogui.press("right") and pyautogui.press("left") to simulate key presses
+
+Controlled PowerPoint slides based on detected fingers (1 = left, 2 = right)
+
+🔹 Optimization Attempts
+Adjusted frame averaging count to reduce startup delay
+
+Discussed potential improvements using Jetson Nano, TensorRT, YOLOv8 for speed and accuracy
+
+💡 Challenges Faced
+ROI too small initially → increased for better hand detection
+
+Frame was empty (_src.empty() error) when webcam didn’t start correctly or ROI out of bounds
+
+Slower frame rate on CPU — recognized that GPU acceleration (Jetson Nano + TensorRT) would help
+
+🛠️ Tools & Libraries Used
+OpenCV
+
+NumPy
+
+pyautogui
+
+scikit-learn (pairwise.euclidean_distances)
+
+Webcam (Internal/External)
+
+📦 Next Steps / Ideas
+Integrate YOLOv8 for hand detection → more robust than contouring
+
+Run on Jetson Nano with TensorRT for real-time speed
+
+Combine gesture recognition with other HCI applications (e.g., media player, browser control)
