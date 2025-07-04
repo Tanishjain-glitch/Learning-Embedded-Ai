@@ -1,0 +1,69 @@
+✅ Topics Covered
+Image Filtering Techniques
+
+Gaussian Blur
+
+Median Blur
+
+Sobel Filters (X & Y)
+
+Laplacian
+
+Canny Edge Detection
+
+Matplotlib & OpenCV Visualization
+
+Displaying images using plt.imshow()
+
+Fixing color format (BGR → RGB)
+
+Handling grayscale and dtype errors
+
+Thresholding
+
+cv2.threshold() with:
+
+THRESH_BINARY
+
+THRESH_BINARY_INV
+
+THRESH_TRUNC
+
+THRESH_TOZERO
+
+THRESH_TOZERO_INV
+
+Explained difference between thresholding types
+
+Adaptive Thresholding: cv2.adaptiveThreshold()
+
+Debugging and Fixes
+
+Fixing TypeError: dtype object cannot be converted to float
+
+Ensuring images are correctly loaded with cv2.imread()
+
+Verifying NumPy image types before plotting
+
+🧪 Hands-On Practice
+Loaded and preprocessed real-world image
+
+Applied multiple filtering methods and compared results
+
+Visualized all thresholding techniques in subplots
+
+Built reusable code for grayscale conversion and edge detection
+
+💡 Key Takeaways
+Median blur is best for removing salt-and-pepper noise.
+
+Grayscale conversion is required before most filters (like Sobel, Canny).
+
+Matplotlib requires uint8 or float images, not objects or None.
+
+Always check if an image is loaded properly (img is None check).
+
+Thresholding is key for image segmentation and binary masking.
+
+Now learning Tensors After Lunch
+
